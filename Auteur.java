@@ -54,7 +54,7 @@ public class Auteur {
     }
 
     public String getCitationDrame() {
-        return this.citDrame;
+        return this.citDrame; 
     }
 
 

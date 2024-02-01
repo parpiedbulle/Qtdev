@@ -73,7 +73,7 @@ class Main {
     
     System.out.println(aristophane.toString());
 
-    //assert aristophane.getQualiteTragedie() = 5;
-    //assert aristophane.getCitationTragedie() = citation_thesmophories;
+    assert aristophane.getQualiteTragedie() == 5;
+    assert aristophane.getCitationTragedie() == citation_thesmophories;
   }
 }
