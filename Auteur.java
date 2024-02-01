@@ -41,6 +41,23 @@ public class Auteur {
         return this.citTraj;
     }
 
+    public int getQualiteCom() {
+        return this.perfoCom;
+    }
+
+    public String getCitationCom() {
+        return this.citCom;
+    }
+
+    public int getQualiteDrame() {
+        return this.perfoDrame;
+    }
+
+    public String getCitationDrame() {
+        return this.citDrame;
+    }
+
+
     @Override
     public String toString() {
         return String.format("L'honorable %s ", this.nom);
