@@ -9,23 +9,36 @@ public class Auteur {
     private int perfoTraj;
     private int perfoCom;
     private int perfoDrame;
+    private String citTraj;
+    private String citCom;
+    private String citDrame;
 
     public Auteur(String nom, int tragedie, int comedie, int drame) {
         this.nom = nom;
         this.perfoTraj = tragedie;
         this.perfoCom = comedie;
         this.perfoDrame = drame;
+        this.citTraj = "";
+        this.citCom = "";
+        this.citDrame = "";
     }
 
-    public Auteur(String nom, int tragedie, String citationtraj, int comedie, String citationCom, int drame, String citationDrame) {
+    public Auteur(String nom, int tragedie, String citTraj, int comedie, String citCom, int drame, String citDrame) {
         this.nom = nom;
         this.perfoTraj = tragedie;
         this.perfoCom = comedie;
         this.perfoDrame = drame;
+        this.citTraj = citTraj;
+        this.citCom = citCom;
+        this.citDrame = citDrame;
     }
 
     public int getQualiteTragedie() {
         return this.perfoTraj;
+    }
+
+    public String getCitationTragedie() {
+        return this.citTraj;
     }
 
     @Override
