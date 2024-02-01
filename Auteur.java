@@ -4,13 +4,22 @@ public class Auteur {
     private int perfoCom;
     private int perfoDrame;
 
-    public Auteur() {
+    public Auteur(String nom, int tragedie, int comedie, int drame) {
         this.nom = nom;
-        this.perfoTraj = 
+        this.perfoTraj = tragedie;
+        this.perfoCom = comedie;
+        this.perfoDrame = drame;
     }
 
-    public getQualiteTragedie() {
-        return this.perfotraj;
+    public Auteur(String nom, int tragedie, String citationtraj, int comedie, String citationCom, int drame, String citationDrame) {
+        this.nom = nom;
+        this.perfoTraj = tragedie;
+        this.perfoCom = comedie;
+        this.perfoDrame = drame;
+    }
+
+    public int getQualiteTragedie() {
+        return this.perfoTraj;
     }
 
 }
