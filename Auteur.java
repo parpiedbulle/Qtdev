@@ -57,6 +57,14 @@ public class Auteur {
         return this.citDrame; 
     }
 
+    public String meilleur() {
+        if (this.perfoTraj > this.perfoDrame AND this.perfoTraj > this.perfoCom) {
+            return "meilleur en Tragedie";}
+        else if (this.perfoCom > this.perfoDrame AND this.perfoCom > this.perfoTraj) {
+            return return "meilleur en Comédie";}
+        else if (this.perfoDrame > this.perfoCom AND this.perfoDrame > this.perfoTraj) {
+            return return "meilleur en Drame";}
+    }
 
     @Override
     public String toString() {
