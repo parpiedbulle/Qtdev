@@ -1,3 +1,9 @@
+// import java.util.HashMap;
+// import java.util.Map; 
+// Map<String, Integer> perfs;
+// creer: this.perfs = new HashMap<>();
+// ajouter: this.perfs.put("DRAME", 50);
+
 public class Auteur {
     private String nom;
     private int perfoTraj;
@@ -22,4 +28,8 @@ public class Auteur {
         return this.perfoTraj;
     }
 
+    @Override
+    public String toString() {
+        return String.format("L'honorable %s ", this.nom);
+    }
 }
