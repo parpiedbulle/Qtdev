@@ -70,5 +70,10 @@ class Main {
                                     5, citation_thesmophories,
                                     100, citation_guêpes,
                                     0, "");
+    
+    System.out.println(aristophane.toString());
+
+    //assert aristophane.getQualiteTragedie() = 5;
+    //assert aristophane.getCitationTragedie() = citation_thesmophories;
   }
 }
