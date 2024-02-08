@@ -1,5 +1,5 @@
-// import java.util.HashMap;
-// import java.util.Map; 
+import java.util.HashMap;
+import java.util.Map; 
 // Map<String, Integer> perfs;
 // creer: this.perfs = new HashMap<>();
 // ajouter: this.perfs.put("DRAME", 50);
@@ -12,6 +12,7 @@ public class Auteur {
     private String citTraj;
     private String citCom;
     private String citDrame;
+    private Map<String, Integer> perfs = new HashMap<>();
 
     public Auteur(String nom, int tragedie, int comedie, int drame) {
         this.nom = nom;
@@ -31,6 +32,9 @@ public class Auteur {
         this.citTraj = citTraj;
         this.citCom = citCom;
         this.citDrame = citDrame;
+        this.perfs.put("DRAME", drame);
+        this.perfs.put("TRAGEDIE", tragedie);
+        this.perfs.put("COMEDIE", comedie);
     }
 
     public int getQualiteTragedie() {
@@ -57,14 +61,18 @@ public class Auteur {
         return this.citDrame; 
     }
 
-    public String meilleur() {
-        if (this.perfoTraj > this.perfoDrame AND this.perfoTraj > this.perfoCom) {
-            return "meilleur en Tragedie";}
-        else if (this.perfoCom > this.perfoDrame AND this.perfoCom > this.perfoTraj) {
-            return return "meilleur en Comédie";}
-        else if (this.perfoDrame > this.perfoCom AND this.perfoDrame > this.perfoTraj) {
-            return return "meilleur en Drame";}
-    }
+    public String pointFort() {
+        int meilleur = 0;
+        String nomMeilleur = "";
+        for (Map.Entry<String, Integer> couple  : perfs.entrySet()) {
+            if (couple.getValue() > meilleur) {
+                meilleur = couple.getValue();
+                nomMeilleur = couple.getKey();
+            }
+        }
+        return nomMeilleur;
+        }
+
 
     @Override
     public String toString() {

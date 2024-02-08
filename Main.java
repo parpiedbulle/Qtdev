@@ -72,7 +72,7 @@ class Main {
                                     0, "");
     
     System.out.println(aristophane.toString());
-
+    System.out.println(aristophane.pointFort());
     assert aristophane.getQualiteTragedie() == 5;
     assert aristophane.getCitationTragedie() == citation_thesmophories;
   }
