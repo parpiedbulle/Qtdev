@@ -1,4 +1,4 @@
-public enum Journee {
+public enum MomentJournee {
     MATIN ("matin"),
     APRESMIDI ("apresmidi"),
     SOIR ("soir");
@@ -7,7 +7,7 @@ public enum Journee {
     private String apresmidi;
     private String soir;
 
-    private Journee(String matin, String apresmidi, String soir) {
+    private MomentJournee(String matin, String apresmidi, String soir) {
         this.matin = matin;
         this.apresmidi = apresmidi;
         this.soir = soir;
