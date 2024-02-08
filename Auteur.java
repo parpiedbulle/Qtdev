@@ -13,6 +13,7 @@ public class Auteur {
     private String citCom;
     private String citDrame;
     private Map<String, Integer> perfs = new HashMap<>();
+    private Map<String, String> citation;
 
     public Auteur(String nom, int tragedie, int comedie, int drame) {
         this.nom = nom;
@@ -35,7 +36,10 @@ public class Auteur {
         this.perfs.put("DRAME", drame);
         this.perfs.put("TRAGEDIE", tragedie);
         this.perfs.put("COMEDIE", comedie);
-    }
+        this.citation.put("Trajedie", citTraj);
+        this.citation.put("Commedie", citCom);
+        this.citation.put("Drame", citDrame);
+      }
 
     public int getQualiteTragedie() {
         return this.perfoTraj;
@@ -71,8 +75,15 @@ public class Auteur {
             }
         }
         return nomMeilleur;
-        }
+    }
 
+    public int qualiteStyle(Style style) {
+        return this.perfs.get(style.toString());
+    }
+
+    public String citationStyle(Style style) {
+        return this.citation.get(style.toString());
+    }
 
     @Override
     public String toString() {
