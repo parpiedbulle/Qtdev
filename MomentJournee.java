@@ -1,7 +1,7 @@
 public enum MomentJournee {
-    MATIN ("matin"),
-    APRESMIDI ("apresmidi"),
-    SOIR ("soir");
+    MATIN,
+    APRESMIDI,
+    SOIR;
 
     private String matin;
     private String apresmidi;
